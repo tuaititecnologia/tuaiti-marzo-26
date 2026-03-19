@@ -11,37 +11,37 @@ import {
 const services = [
   {
     icon: Server,
-    title: "Administración y monitoreo",
+    title: "Servidores siempre bajo control",
     description:
       "Gestión y control del estado de servidores. Monitoreo proactivo y respuesta ante incidencias.",
   },
   {
     icon: Mail,
-    title: "Hosting y correo gestionado",
+    title: "Tu correo y archivos, siempre disponibles",
     description:
       "Configuración, mantenimiento y soporte integral para tu infraestructura web y correos corporativos.",
   },
   {
     icon: Globe,
-    title: "Redes y conectividad",
+    title: "Internet estable en toda tu oficina",
     description:
       "Implementación de VPNs empresariales, firewalls y acceso remoto seguro para múltiples sedes.",
   },
   {
     icon: HardDrive,
-    title: "Backups y recuperación",
+    title: "Tus datos protegidos ante cualquier imprevisto",
     description:
       "Estrategias de copia de seguridad y restauración para evitar pérdida de datos crítica.",
   },
   {
     icon: Zap,
-    title: "Automatización TI",
+    title: "Menos tareas manuales, más productividad",
     description:
       "Optimización de procesos internos para ahorrar horas hombre y reducir el margen de error.",
   },
   {
     icon: Headphones,
-    title: "Soporte e incidencias",
+    title: "Soporte rápido cuando algo falla",
     description:
       "Servicio de atención directa y prioritaria para bloqueos operativos sin intermediarios lentos.",
   },

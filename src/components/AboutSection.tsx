@@ -25,7 +25,7 @@ const AboutSection = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={aboutImg}
-                alt="Alejandro Sanchez, fundador de Tuiati"
+                alt="Alejandro Sanchez, fundador de Tuaiti"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -42,7 +42,7 @@ const AboutSection = () => {
 
             {/* Founder badge */}
             <div
-              className="absolute bottom-6 left-6 text-white px-4 py-3 rounded-xl shadow-lg"
+              className="absolute bottom-6 right-10 text-white px-4 py-3 rounded-xl shadow-lg"
               style={{ backgroundColor: "#1F3A5F" }}
             >
               <p className="text-xs font-medium uppercase tracking-wider opacity-75">
@@ -71,22 +71,11 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-[#505050] leading-relaxed mb-5">
-              En <strong>Tuiati</strong>, brindamos{" "}
-              <strong>soporte tecnológico gestionado para empresas</strong>.
-              Acompañamos a cada cliente proporcionando herramientas para la
-              toma de decisiones, ayudando a seleccionar la tecnología
-              adecuada y asignar el presupuesto de forma eficiente a
-              soluciones adaptadas a sus necesidades.
+              Hace más de 25 años que ayudo a empresas a resolver sus problemas de tecnología sin complicaciones. Soy Alejandro Sanchez, y estoy convencido de que la tecnología tiene que ser simple: que funcione, que no cueste de más, y que alguien te atienda cuando lo necesitás.
             </p>
 
             <p className="text-[#505050] leading-relaxed mb-8">
-              Soy Alejandro Sanchez y cuento con{" "}
-              <strong>25 años de experiencia trabajando con pymes</strong>
-              {" "}que requieren soporte responsable y continuo.
-              Nuestro enfoque está en mantener la continuidad operativa,
-              resolver problemas con rapidez y comunicarnos de forma clara
-              con cada cliente. Me involucro personalmente en cada proyecto
-              para asegurar un trato cercano desde el primer contacto.
+              No vendo marcas ni productos caros por comisión. Recomiendo lo que tu empresa realmente necesita.
             </p>
 
             {/* Highlights */}
@@ -121,7 +110,7 @@ const AboutSection = () => {
               className="text-sm font-semibold italic"
               style={{ color: "#1F3A5F" }}
             >
-              — Alejandro Sanchez, Fundador de Tuiati.
+              — Alejandro Sanchez, Fundador de Tuaiti.
             </p>
           </motion.div>
         </div>
