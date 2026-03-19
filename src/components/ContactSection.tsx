@@ -60,7 +60,13 @@ const ContactSection = () => {
               </p>
 
               <p className="text-xl font-bold mb-4 max-lg:text-[#1F3A5F] text-[#d4d4d4]">
-                Llamanos al: +54 9 11 3511-7785
+                <a
+                  href="https://wa.me/5491135117785"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Llamanos al: +54 9 11 3511-7785
+                </a>
               </p>
 
 
@@ -231,7 +237,7 @@ const ContactSection = () => {
                       </p>
                       {/* WhatsApp CTA */}
                       <a
-                        href="https://wa.me/+5491135117785"
+                        href="https://wa.me/5491135117785"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 justify-center bg-[#25D366] hover:bg-[#1da851] text-white font-bold text-sm px-8 py-3.5 rounded-md transition-colors duration-300 w-full"
