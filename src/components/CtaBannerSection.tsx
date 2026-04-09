@@ -77,22 +77,10 @@ const CtaBannerSection = () => {
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <a
-                href="https://wa.me/5491135117785"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#E47223] text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-[0_10px_30px_rgba(228,114,35,0.3)] hover:shadow-[0_15px_40px_rgba(228,114,35,0.4)] hover:-translate-y-1 transition-all duration-300"
               >
-                Habla con un experto
-                <ArrowRight className="w-5 h-5" />
-              </a>
-
-              <a
-                href="https://wa.me/5491135117785"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 text-white px-6 py-3.5 rounded-xl font-bold text-sm hover:-translate-y-1 transition-all duration-300"
-              >
-                Llamar por WhatsApp
+                Contactar ahora
                 <ArrowRight className="w-5 h-5" />
               </a>
             </motion.div>

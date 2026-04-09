@@ -286,9 +286,8 @@ const ContactSection = () => {
                         {loading ? "Enviando..." : "Enviar consulta"}
                       </button>
                       <p className="text-center text-sm text-gray-500 mt-4 mb-4">
-                        O si preferís, <a href="https://wa.me/+5491135117785" target="_blank" rel="noopener noreferrer" className="text-[#E47223]  font-medium hover:underline">escribinos por WhatsApp</a>.
+                        O si preferís:
                       </p>
-                      {/* WhatsApp CTA */}
                       <a
                         href="https://wa.me/5491135117785"
                         target="_blank"
