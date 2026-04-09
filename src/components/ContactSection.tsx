@@ -96,7 +96,7 @@ const ContactSection = () => {
       <div className="container mx-auto py-16 lg:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           {/* LEFT COLUMN */}
-          <div className="lg:col-span-6 flex flex-col justify-between">
+          <div className="lg:col-span-6 flex flex-col">
             {/* Dark Section Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -128,61 +128,24 @@ const ContactSection = () => {
 
 
 
-              <h4 className="font-bold text-xl mt-10 mb-6">Tus beneficios:</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
-                <ul className="space-y-3 font-semibold text-sm">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    Sin ataduras a marcas: recomendamos la mejor opción
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    Respuesta en el día para urgencias
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    25 años de experiencia real con PYMES
-                  </li>
-                </ul>
-                <ul className="space-y-3 font-semibold text-sm">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    Presupuestos claros, sin costos ocultos
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    Un referente único para toda tu tecnología
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
-                    Sin contratos de permanencia
-                  </li>
-                </ul>
-              </div>
-
-              <h4 className="font-bold text-xl mb-8">¿Qué pasa después?</h4>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
-                <div className="flex items-start sm:items-center gap-3 max-w-[160px]">
-                  <span className="text-4xl sm:text-3xl font-normal text-[#1F3A5F]">1</span>
-                  <p className="text-sm font-semibold">
-                    Agendamos una llamada a tu conveniencia
-                  </p>
-                </div>
-                <div className="text-gray-300 text-2xl font-light hidden sm:block">›</div>
-                <div className="flex items-start sm:items-center gap-3 max-w-[160px]">
-                  <span className="text-4xl sm:text-3xl font-normal text-[#1F3A5F]">2</span>
-                  <p className="text-sm font-semibold">
-                    Hacemos una reunión de consultoría
-                  </p>
-                </div>
-                <div className="text-gray-300 text-2xl font-light hidden sm:block">›</div>
-                <div className="flex items-start sm:items-center gap-3 max-w-[160px]">
-                  <span className="text-4xl sm:text-3xl font-normal text-[#1F3A5F]">3</span>
-                  <p className="text-sm font-semibold">
-                    Preparamos una propuesta
-                  </p>
-                </div>
-              </div>
+              <ul className="space-y-3 font-semibold text-sm mt-8">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
+                  Sin ataduras a marcas ni contratos de permanencia
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
+                  Respuesta en el día para urgencias
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
+                  25 años de experiencia real con PYMES
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="text-[#1F3A5F] w-5 h-5 flex-shrink-0" />
+                  Presupuestos claros, sin costos ocultos
+                </li>
+              </ul>
             </motion.div>
           </div>
 
@@ -193,7 +156,7 @@ const ContactSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-8 md:p-10 border border-gray-100 relative h-full flex flex-col justify-center"
+              className="bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-8 md:p-10 border border-gray-100 relative"
             >
               {submitted ? (
                 <div className="text-center py-16">
