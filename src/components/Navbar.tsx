@@ -1,6 +1,39 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+
+const sectionIds = ["home", "about", "services", "contact"];
+
+function useActiveSection() {
+  const [active, setActive] = useState("home");
+  const observer = useRef<IntersectionObserver | null>(null);
+
+  const setup = useCallback(() => {
+    observer.current?.disconnect();
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.current!.observe(el);
+    });
+  }, []);
+
+  useEffect(() => {
+    setup();
+    return () => observer.current?.disconnect();
+  }, [setup]);
+
+  return active;
+}
 
 const navLinks = [
   { label: "Inicio", href: "#home" },
@@ -31,6 +64,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,27 +108,24 @@ const Navbar = () => {
 
           {/* DESKTOP NAV (movido a la derecha) */}
           <ul className="hidden md:flex items-center gap-10 font-medium ml-auto mr-12">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="relative text-[14px] pb-1 transition-colors duration-200
-                  text-[#1F3A5F] hover:text-[#2563EB]
-                  after:content-['']
-                  after:absolute
-                  after:left-0
-                  after:-bottom-1
-                  after:w-0
-                  after:h-[2px]
-                  after:bg-[#E47223]
-                  after:transition-all
-                  after:duration-300
-                  hover:after:w-full"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.slice(1);
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className={`relative text-[14px] pb-1 transition-colors duration-200
+                    after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[#E47223] after:transition-all after:duration-300
+                    ${isActive
+                      ? "text-[#2563EB] after:w-full"
+                      : "text-[#1F3A5F] hover:text-[#2563EB] after:w-0 hover:after:w-full"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           {/* DERECHA: CTA */}
@@ -115,6 +146,7 @@ const Navbar = () => {
           {/* HAMBURGER */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
             className="md:hidden ml-auto transition-colors duration-300 text-[#1F3A5F]"
           >
             {mobileOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}

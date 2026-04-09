@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 const HeroImage = () => {
 
@@ -16,26 +16,13 @@ const HeroImage = () => {
 
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
 
-          {/* Badge superior */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ ...springConfig, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-5"
-          >
-            <span className="flex h-2 w-2 rounded-full bg-blue-600"></span>
-
-            <span className="text-[12px] md:text-[10px] font-semibold  text-blue-800 uppercase tracking-wide">
-              Soporte TI
-            </span>
-          </motion.div>
 
           {/* Título principal */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...springConfig, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-[4rem] mt-9 md:mt-0 font-extrabold text-[#0f1d5e] leading-[1.1] mb-6 tracking-tight"
+            className="text-4xl md:text-6xl lg:text-[4rem] mt-9 md:mt-0 font-extrabold text-[#0f1d5e] leading-[1.1] mb-6 tracking-tight"
           >
             Tu tecnología funcionando. <br className="hidden md:block" />
 
@@ -66,7 +53,7 @@ const HeroImage = () => {
               href="#contact"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#E47223] mt-5 md:mt-0 text-white px-6 py-3.5 rounded-xl font-bold text-base shadow-[0_10px_30px_rgba(228,114,35,0.3)] hover:shadow-[0_15px_40px_rgba(228,114,35,0.4)] hover:-translate-y-1 transition-all duration-300"
             >
-              Contactar ahora
+              Empezá tu consulta
               <ArrowRight className="w-5 h-5" />
             </a>
 
@@ -95,6 +82,15 @@ const HeroImage = () => {
         </div>
 
       </div>
+
+      {/* Scroll indicator */}
+      <a
+        href="#about"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce text-gray-400 hover:text-[#1F3A5F] transition-colors"
+        aria-label="Ir a la siguiente sección"
+      >
+        <ChevronDown className="w-7 h-7" />
+      </a>
     </section>
   );
 };
